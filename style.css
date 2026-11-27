@@ -1,0 +1,15 @@
+body{background:#FAF8F5;color:#2C1E16;font-family:'Montserrat',sans-serif;overflow-x:hidden}
+h1,h2,h3,h4,.font-editorial{font-family:'Cormorant Garamond',serif}
+.nav-item{position:relative;letter-spacing:.18em;transition:color .3s}
+.nav-item::after{content:'';position:absolute;width:0;height:1px;bottom:-5px;left:50%;background:#A67C46;transition:all .35s;transform:translateX(-50%)}
+.nav-item:hover::after,.nav-item.active-page::after{width:100%}
+.nav-item.active-page{color:#A67C46;font-weight:600}
+.garment-img{transition:transform .7s cubic-bezier(.25,.46,.45,.94)}
+.garment-card:hover .garment-img{transform:scale(1.03)}
+#modal{animation:fade .25s ease}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+:focus-visible{outline:2px solid #A67C46;outline-offset:2px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+::-webkit-scrollbar{width:6px;height:6px}
+::-webkit-scrollbar-track{background:#FAF8F5}
+::-webkit-scrollbar-thumb{background:#C5A368;border-radius:3px}

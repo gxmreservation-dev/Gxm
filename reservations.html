@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GXM BOUTIQUE | Réservations privées</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="script.js"></script>
+</head>
+<body class="antialiased flex flex-col min-h-screen" data-page="reservations.html">
+<div id="site-header"></div>
+<main class="flex-grow">
+<div class="max-w-6xl mx-auto px-6 sm:px-10 py-16">
+ <div class="text-center max-w-2xl mx-auto mb-14">
+  <span class="text-[11px] uppercase tracking-[0.3em] text-gxm-gold font-medium block mb-3">Accueil privé sur rendez-vous</span>
+  <h1 class="font-editorial text-4xl sm:text-6xl mb-4">Réservations &amp; essayage privé</h1>
+  <p class="text-xs sm:text-sm font-light text-gxm-taupe leading-relaxed">Prenez rendez-vous à la boutique de Saint-Tropez, dans votre hôtel ou à bord de votre yacht.</p>
+ </div>
+ <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+  <div class="lg:col-span-5 space-y-6 bg-gxm-sand/70 p-8 rounded-sm border border-gxm-champagne h-fit">
+   <h3 class="font-editorial text-2xl border-b border-gxm-champagne pb-3">Votre expérience GXM</h3>
+   <div class="space-y-4 text-xs text-gxm-taupe font-light">
+    <div class="flex items-start space-x-3"><i class="fa-solid fa-crown text-gxm-gold mt-0.5"></i><div><strong class="text-gxm-espresso font-medium block">Accueil privé et conseil d’expert</strong>Un styliste dédié vous aide à choisir vos tenues femme ou homme.</div></div>
+    <div class="flex items-start space-x-3"><i class="fa-solid fa-scissors text-gxm-gold mt-0.5"></i><div><strong class="text-gxm-espresso font-medium block">Retouches express</strong>Ajustement par un tailleur dédié pour votre mariage, gala ou soirée privée.</div></div>
+    <div class="flex items-start space-x-3"><i class="fa-solid fa-shield-halved text-gxm-gold mt-0.5"></i><div><strong class="text-gxm-espresso font-medium block">Livraison à l’hôtel ou au yacht</strong>Livraison directe et sécurisée à Saint-Tropez.</div></div>
+   </div>
+  </div>
+  <div class="lg:col-span-7 bg-white p-8 sm:p-10 rounded-sm border border-gxm-champagne shadow-sm">
+   <form id="booking-form" class="space-y-5">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+     <div><label for="client-name" class="block text-[10px] uppercase tracking-[0.2em] text-gxm-taupe mb-2">Nom et prénom *</label><input id="client-name" type="text" required placeholder="Ex : Alexandre Moreau" class="w-full px-4 py-3 bg-gxm-cream/70 border border-gxm-champagne text-xs focus:outline-none focus:border-gxm-gold rounded-sm"></div>
+     <div><label for="client-email" class="block text-[10px] uppercase tracking-[0.2em] text-gxm-taupe mb-2">Email (Gmail ou autre) *</label><input id="client-email" type="email" required placeholder="prenom.nom@gmail.com" class="w-full px-4 py-3 bg-gxm-cream/70 border border-gxm-champagne text-xs focus:outline-none focus:border-gxm-gold rounded-sm"></div>
+    </div>
+    <div><label for="client-phone" class="block text-[10px] uppercase tracking-[0.2em] text-gxm-taupe mb-2">Téléphone (facultatif)</label><input id="client-phone" type="tel" placeholder="+33 6 00 00 00 00" class="w-full px-4 py-3 bg-gxm-cream/70 border border-gxm-champagne text-xs focus:outline-none focus:border-gxm-gold rounded-sm"></div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+     <div><label for="booking-category" class="block text-[10px] uppercase tracking-[0.2em] text-gxm-taupe mb-2">Sélection *</label><select id="booking-category" class="w-full px-4 py-3 bg-gxm-cream/70 border border-gxm-champagne text-xs focus:outline-none focus:border-gxm-gold rounded-sm"><option>Cérémonie femme</option><option>Cérémonie homme (sur mesure)</option><option>Duo cérémonie (femme et homme)</option><option>Accessoires et bijoux</option></select></div>
+     <div><label for="booking-location" class="block text-[10px] uppercase tracking-[0.2em] text-gxm-taupe mb-2">Lieu du rendez-vous *</label><select id="booking-location" class="w-full px-4 py-3 bg-gxm-cream/70 border border-gxm-champagne text-xs focus:outline-none focus:border-gxm-gold rounded-sm"><option>Boutique de Saint-Tropez</option><option>Hôtel 5*</option><option>À bord d’un yacht</option></select></div>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+     <div><label for="booking-date" class="block text-[10px] uppercase tracking-[0.2em] text-gxm-taupe mb-2">Date souhaitée *</label><input id="booking-date" type="date" required class="w-full px-4 py-3 bg-gxm-cream/70 border border-gxm-champagne text-xs focus:outline-none focus:border-gxm-gold rounded-sm"></div>
+     <div><label for="booking-time" class="block text-[10px] uppercase tracking-[0.2em] text-gxm-taupe mb-2">Créneau</label><select id="booking-time" class="w-full px-4 py-3 bg-gxm-cream/70 border border-gxm-champagne text-xs focus:outline-none focus:border-gxm-gold rounded-sm"><option>Matinée</option><option>Après-midi</option><option>Soirée (sur demande)</option></select></div>
+    </div>
+    <div><label for="booking-notes" class="block text-[10px] uppercase tracking-[0.2em] text-gxm-taupe mb-2">Précisions (pièce souhaitée, événement, retouches)</label><textarea id="booking-notes" rows="3" placeholder="Indiquez la pièce souhaitée ou la nature de votre événement" class="w-full px-4 py-3 bg-gxm-cream/70 border border-gxm-champagne text-xs focus:outline-none focus:border-gxm-gold rounded-sm"></textarea></div>
+    <button type="submit" class="w-full py-4 bg-gxm-espresso text-gxm-cream text-xs uppercase tracking-[0.25em] hover:bg-gxm-gold transition-all rounded-sm">Demander ce rendez-vous</button>
+   </form>
+  </div>
+ </div>
+</div>
+</main>
+<div id="site-footer"></div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GXM BOUTIQUE | Saint-Tropez — Accueil</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+</head>
+<body class="antialiased flex flex-col min-h-screen" data-page="index.html">
+<div id="site-header"></div>
+<main class="flex-grow">
+<section class="min-h-[70vh] flex items-center justify-center bg-gxm-sand border-b border-gxm-champagne">
+ <div class="max-w-4xl mx-auto px-6 text-center py-16">
+  <div class="inline-flex items-center justify-center w-16 h-16 rounded-full border border-gxm-gold bg-gxm-cream/90 mb-6"><span class="font-editorial text-2xl tracking-widest text-gxm-gold font-semibold">GXM</span></div>
+  <p class="text-[11px] uppercase tracking-[0.38em] text-gxm-gold font-medium mb-4">Saint-Tropez • Vêtements et accessoires haut de gamme</p>
+  <h1 class="font-editorial text-4xl sm:text-6xl md:text-7xl font-normal leading-tight mb-6">« Votre élégance,<br><span class="italic text-gxm-gold">votre moment »</span></h1>
+  <p class="max-w-xl mx-auto text-xs sm:text-sm font-light leading-relaxed text-gxm-taupe mb-10">Boutique indépendante au cœur de Saint-Tropez. Nous achetons directement auprès de créateurs et d’ateliers français pour vous proposer des pièces uniques ou en édition très limitée, pour femme et homme.</p>
+  <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+   <a href="collection.html" class="w-full sm:w-auto px-8 py-4 bg-gxm-espresso text-gxm-cream text-xs uppercase tracking-[0.22em] hover:bg-gxm-gold transition-all rounded-sm">Explorer la Collection Capsule</a>
+   <a href="reservations.html" class="w-full sm:w-auto px-8 py-4 border border-gxm-gold bg-gxm-cream/90 text-xs uppercase tracking-[0.22em] hover:bg-gxm-gold hover:text-white transition-all rounded-sm">Prendre rendez-vous</a>
+  </div>
+ </div>
+</section>
+
+<section class="max-w-7xl mx-auto px-6 sm:px-10 py-20">
+ <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+  <div class="lg:col-span-5 space-y-6">
+   <span class="text-[11px] uppercase tracking-[0.28em] text-gxm-gold font-medium block">Le circuit court</span>
+   <h2 class="font-editorial text-4xl sm:text-5xl leading-tight">Des pièces choisies, sans <span class="italic text-gxm-gold">intermédiaire</span></h2>
+   <p class="text-xs sm:text-sm font-light leading-relaxed text-gxm-taupe">Nous achetons directement auprès des producteurs (créateurs et ateliers). Cela garantit l’exclusivité des modèles, évite les marges des intermédiaires et permet de proposer des pièces en édition très limitée.</p>
+   <ul class="space-y-3 pt-2 text-xs border-t border-gxm-champagne">
+    <li class="flex items-center space-x-3"><span class="w-1.5 h-1.5 rounded-full bg-gxm-gold"></span><span><strong>Commerce indépendant :</strong> liberté totale dans le choix des créateurs, des prix et de l’ambiance.</span></li>
+    <li class="flex items-center space-x-3"><span class="w-1.5 h-1.5 rounded-full bg-gxm-gold"></span><span><strong>Femme &amp; Homme :</strong> tenues de cérémonie, costumes, bijoux et accessoires.</span></li>
+    <li class="flex items-center space-x-3"><span class="w-1.5 h-1.5 rounded-full bg-gxm-gold"></span><span><strong>Sans concept imposé :</strong> ni franchise, ni redevances, une autonomie artistique totale.</span></li>
+   </ul>
+   <a href="actualites.html" class="inline-block text-xs uppercase tracking-[0.2em] text-gxm-gold hover:text-gxm-espresso border-b border-gxm-gold pb-1 transition-colors">Lire les actualités de la boutique</a>
+  </div>
+  <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+   <div class="garment-card bg-gxm-sand p-3 rounded-sm border border-gxm-champagne">
+    <div class="overflow-hidden aspect-[3/4] mb-3 border border-gxm-champagne/80 bg-[#F4EFE6]"><img src="images/accueil-femme.jpg" alt="Sélection femme" onerror="gxmPh(this)" class="w-full h-full object-cover garment-img"></div>
+    <p class="text-[10px] uppercase tracking-[0.2em] text-gxm-gold">Sélection de l’atelier</p><p class="font-editorial text-xl">Nuances sable &amp; champagne</p>
+   </div>
+   <div class="garment-card bg-gxm-sand p-3 rounded-sm border border-gxm-champagne sm:mt-8">
+    <div class="overflow-hidden aspect-[3/4] mb-3 border border-gxm-champagne/80 bg-[#F4EFE6]"><img src="images/accueil-homme.jpg" alt="Tailleur homme" onerror="gxmPh(this)" class="w-full h-full object-cover garment-img"></div>
+    <p class="text-[10px] uppercase tracking-[0.2em] text-gxm-gold">Tailleur homme</p><p class="font-editorial text-xl">Coupes lin &amp; brun clair</p>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="bg-gxm-sand/60 border-y border-gxm-champagne">
+ <div class="max-w-7xl mx-auto px-6 sm:px-10 py-16">
+  <h2 class="font-editorial text-3xl sm:text-4xl text-center mb-10">Ce qui nous distingue</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-xs font-light text-gxm-taupe leading-relaxed">
+   <div><h3 class="font-editorial text-xl text-gxm-espresso mb-2">Prix maintenus</h3>Nous préservons l’image luxe face aux grands magasins en ne bradant jamais nos pièces.</div>
+   <div><h3 class="font-editorial text-xl text-gxm-espresso mb-2">Exclusivité</h3>Pièces uniques ou séries très limitées, à l’opposé de l’offre standardisée.</div>
+   <div><h3 class="font-editorial text-xl text-gxm-espresso mb-2">Service sur mesure</h3>Accueil privé, conseil d’expert, retouches express par un tailleur dédié et livraison à l’hôtel ou au yacht.</div>
+   <div><h3 class="font-editorial text-xl text-gxm-espresso mb-2">Savoir-faire français</h3>Nous valorisons l’artisanat face à la production industrielle.</div>
+  </div>
+ </div>
+</section>
+</main>
+<div id="site-footer"></div>
+</body>
+</html>
